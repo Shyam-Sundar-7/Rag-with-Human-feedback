@@ -75,20 +75,32 @@ if st.button("Search"):
             # for idx in ranked_indices:
             #     st.write(f"{reranker[idx]:.2f}\t{corpus[idx][1]}")
         
-        
-        for idx in ranked_indices:
-            ans=llm_chain.invoke({"context":corpus[idx][1], "question":query})
-            text=corpus[idx][1]
-            st.write(f"Document :{idx+1}\t{corpus[idx][1]}")
-            genre = st.radio(f"Answer : \n {ans}",[":thumbsup:",":thumbdown:"],horizontal=True)
-            if genre == ":thumbsup:":
-                score=1
-                document.append({"Text":text,"Query":query,"Score":score})
-            else:
-                score=0
-                document.append({"Text":text,"Query":query,"Score":score})
-        
+        data=pd.DataFrame([[query, doc.page_content,0] for doc in retrievered],columns=["question","context","score"])
+        data['reranker']=reranker
+        data.sort_values(by="reranker",ascending=False,inplace=True)
+        directory = "testing"
+        if not os.path.exists(directory):
+            os.makedirs(directory)
+        data.to_csv(f".\{directory}\{query}_feedback_.csv",index=False)
+        idx = 0
+        while idx < len(data):
+            with st.form(f"my_form_{idx}", clear_on_submit=True):
+                ans = llm_chain.invoke({"context": data.iloc[idx, 1], "question": query})
+                st.write(f"Document :{idx+1}\t{data.iloc[idx, 1]}")
+                genre = st.radio(f"Answer : \n {ans}", [":thumbsup:", ":thumbsdown:"], horizontal=True, key=f"genre_{idx}")
+                click = st.form_submit_button("Feedback")
+                
+                if click:
+                    if genre == ":thumbsup:":
+                        data.iloc[idx, 2] = 1
+                    idx += 1  # Move to the next document
+                    break  # Exit the form context
+                    
+            if not click:  # If the form hasn't been submitted yet, stay on the same document
+                continue
 
-
-        
-        st.write(prompt)
+        directory = "training"
+        if not os.path.exists(directory):
+            os.makedirs(directory)
+        data.to_csv(f".\{directory}\{query}_feedback_.csv",index=False)
+        st.table(data)
