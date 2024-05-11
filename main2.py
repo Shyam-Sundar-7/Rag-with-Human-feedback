@@ -100,4 +100,5 @@ if st.button("Search"):
         if not os.path.exists(directory):
             os.makedirs(directory)
         data.to_csv(f".\{directory}\{query}_feedback_.csv", index=False)
-        st.table(data)
+        # st.table(data)
+        st.success(f"created a feedback at .\{directory}\{query}_feedback_.csv.    Done!...")

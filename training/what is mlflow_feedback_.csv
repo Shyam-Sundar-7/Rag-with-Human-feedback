@@ -1,0 +1,38 @@
+question,context,score,reranker,answer
+what is mlflow,"1
+Introducing MLflow
+MLflow  is an open source platform for the machine learning (ML) life cycle, with a 
+focus on reproducibility , training , and deployment . It is based on an open interface design 
+and is able to work with any language or platform, with clients in Python and Java, and",0,9.785347,"MLflow is an open source platform for the machine learning life cycle, focusing on reproducibility, training, and deployment. It has an open interface design and can work with any language or platform, with clients available in Python and Java."
+what is mlflow,"with MLflow .
+MLflow and other ecosystem tools
+MLflow is a tool that was created by the open source community to address a gap in open 
+systems for ML systems, focused on reproducibility, model management, and deployment.",0,9.475245,"MLflow is an open-source tool created for reproducibility, model management, and deployment in machine learning systems. It was developed by the open source community to address a gap in open systems for ML. MLflow is part of the ecosystem of tools available for machine learning tasks."
+what is mlflow,"MLflow is by no means a complete tool; it needs other components and is a central part of 
+an ML solution when its strengths are leveraged.
+In recent years, systems such as Kubeflow  have been emerging in the Kubernetes",0,8.635927,MLflow is a tool that is a central part of an ML solution when its strengths are leveraged. It is not a complete tool and requires other components to work effectively. Systems like Kubeflow have been emerging in the Kubernetes ecosystem in recent years.
+what is mlflow,"jar
+At this stage, MLflow is natively integrated into the Python ecosystem. It provides links to 
+other ecosystems similar to what we demonstrated in this chapter with the JVM language.",0,5.9904895,"MLflow is a tool that is natively integrated into the Python ecosystem. It provides links to other ecosystems, similar to how it integrates with the JVM language."
+what is mlflow,MLflow will also be described.,0,3.9320853,"MLflow is an open-source platform for managing the end-to-end machine learning lifecycle. It includes tools for tracking experiments, packaging code into reproducible runs, and sharing and deploying models."
+what is mlflow,"Basically, what happens with the previous command is that MLflow clones the repository 
+to a temporary directory and executes it, according to the recipe on MLProject.
+The ID of the experiment (or the name) allows you to run the project with the original",0,3.3488681,"MLflow is a tool that allows you to track and manage machine learning experiments. It helps with organizing code, running experiments, and tracking results. MLflow also provides a way to reproduce and share experiments."
+what is mlflow,"80     Experiment Management in MLflow
+2. Defining an objective function: The objective function is the most important step 
+of the process, essentially defining what we want to achieve with our optimization. 
+In our particular case, we want to optimize the f1_score  metric in our model.",0,2.6672885,"MLflow is a platform for managing the end-to-end machine learning lifecycle. It includes experiment tracking, packaging code into reproducible runs, and sharing and deploying models. It helps data scientists and machine learning engineers manage their machine learning projects efficiently."
+what is mlflow,"Installing collected packages: mlflow
+  Attempting uninstall: mlflow
+    Found existing installation: mlflow 1.16.0
+    Uninstalling mlflow-1.16.0:
+      Successfully uninstalled mlflow-1.16.0
+Successfully installed mlflow-1.15.0
+pip 20.2.4 from /miniconda/lib/python3.8/site-packages/",0,1.3967278,"MLflow is a package that was successfully installed in version 1.15.0. It seems that a previous version, 1.16.0, was uninstalled before the new version was installed."
+what is mlflow,"range(0,14) ] )
+5. Execute the data drift report generation and log into an MLflow run. Basically, what 
+happens in the following code excerpt is the generation of an Evidently dashboard 
+with the reference data and the latest input data. A drift report is calculated and",0,0.8890651,"MLflow is a platform used for managing the end-to-end machine learning lifecycle. It helps track experiments, package code, and share models. MLflow also provides tools for managing and monitoring machine learning models."
+what is mlflow,"MLﬂ ow with high-performance big 
+data librariesMLﬂ ow is a platform for the machine learning life cycle that enables structured development and iteration 
+of machine learning models and a seamless transition into scalable production environments.",0,-0.33476636,MLflow is a platform for the machine learning life cycle that enables structured development and iteration of machine learning models. It also allows for a seamless transition into scalable production environments.

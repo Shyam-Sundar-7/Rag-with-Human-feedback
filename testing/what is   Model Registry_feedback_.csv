@@ -1,0 +1,40 @@
+question,context,score,reranker
+what is   Model Registry,"models. We will now move on to the other critical module in this space, namely the  
+Model Registry.
+Introducing Model Registry
+MLflow Model Registry is a module in MLflow that comprises a centralized store for 
+Models, an API allowing the management of the life cycle of a model in a registry.",0,8.134576
+what is   Model Registry,"relevant elements of the context of your system.
+• Model Registry store : This feature allows you to customize where your models 
+are stored; you can store them—for instance—in a Secure File Transfer Protocol 
+(SFTP) system if this is the only way you might store the models of your production",0,6.7208915
+what is   Model Registry,"model format abstraction and Model Registry  component to manage models.
+• Deployment : Having a development environment aligned with the production 
+environment where the model will be serviced requires deliberation in the local",0,5.4535565
+what is   Model Registry,"models: sklearn, XGBoost, TensorFlow, H20, fastai, and others. It has features to 
+manage output and input schemas of models and to facilitate deployment.
+• Model Registry : This module handles a model life cycle, from registering and",0,5.1151237
+what is   Model Registry,"Introducing Model Registry     95
+In the MLflow UI (available in your local environment), you should click on the tab on the 
+right side of Experiments with the label Models  as indicated by the arrow:
+1. Through this module, you are able to list all the models registered, search by name,",0,4.485827
+what is   Model Registry,"the training process, which is to register the model in the MLflow Model Registry so that 
+it can be deployed in production.
+Deploying the model in the Model Registry
+Next, you should add the register_model.py  function to register the model in the 
+Model Registry.",0,4.379483
+what is   Model Registry,is generated as output and registered in the Model Registry with different details.,0,4.1855564
+what is   Model Registry,"relevant name can be given to a specific model as shown in Figure 5.8:
+Figure 5.8 – Model Registry UI – Create Model",0,3.4385946
+what is   Model Registry,"Table of Contents  vii
+5
+Managing Models with MLflow
+Technical requirements 86
+Understanding models in MLflow 86
+Exploring model flavors in 
+MLflow 90
+Custom models 91
+Managing model signatures 
+and schemas 92Introducing Model Registry 94
+Adding your best model to Model 
+Registry 96",0,0.6840196
