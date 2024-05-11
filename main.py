@@ -55,14 +55,6 @@ def process_pdf_batch(pdf_files):
     return batch_docs
 
 
-if "searched" not in st.session_state:
-    st.session_state["searched"] = False
-
-if "uploaded_files" not in st.session_state:
-    st.session_state["uploaded_files"] = False
-
-st.session_state
-
 
 def get_retrieved_documents(loader, query):
     with st.spinner("Multiple pdf are being processed. Please wait....."):
@@ -92,14 +84,13 @@ def get_retrieved_documents(loader, query):
     return data
 
 
+
 # document=[]
 if st.button("Search"):
-    st.session_state["searched"] = True
     if uploaded_files:
-        st.session_state["uploaded_files"] = True
 
         data = get_retrieved_documents(uploaded_files, query)
-
+        st.dataframe(data)
         idx = 0
         while idx < len(data):
             with st.form(f"my_form_{idx}"):
@@ -130,4 +121,4 @@ if st.button("Search"):
         if not os.path.exists(directory):
             os.makedirs(directory)
         data.to_csv(f".\{directory}\{query}_feedback_.csv", index=False)
-        st.table(data)
+        st.dataframe(data)
