@@ -1,0 +1,33 @@
+question,context,score,reranker,answer
+where are you,"relevant elements of the context of your system.
+• Model Registry store : This feature allows you to customize where your models 
+are stored; you can store them—for instance—in a Secure File Transfer Protocol 
+(SFTP) system if this is the only way you might store the models of your production",0,-7.8306904,I don't have a physical location as I am a virtual assistant. My functions are based in the digital realm to assist with question-answering tasks.
+where are you,"Shyam Sundar
+5,kavimani steet, Pankajam colony, 3rd cross street, Madurai, India - 625009
+♂phone+91-9080765574 /envel⌢pemailshyamsundar.2022@gmail.com /linkedinshyamsundar007 /githubShyam-Sundar-7♂laptopPortfolio
+Projects",0,-8.365195,"Shyam Sundar is located at 5 Kavimani Street, Pankajam Colony, 3rd Cross Street, Madurai, India - 625009. You can contact him at +91-9080765574 or email him at shyamsundar.2022@gmail.com. He can also be found on LinkedIn as shyamsundar007 and on GitHub as Shyam-Sundar-7."
+where are you,"or create by name. For each model, you can see the label of the latest version and the 
+specific versions that are in staging or production:
+Figure 5.7 – Model Registry UI
+2. A new model can be created by clicking on the Create Model  button where a",0,-9.716761,I don't know.
+where are you,"If you are interested in becoming an author: If there is a topic that you have expertise  
+in and you are interested in either writing or contributing to a book, please visit 
+authors.packtpub.com .
+Share Your Thoughts",0,-9.743078,I don't know.
+where are you,"model packaging is to decouple the model type from the environment that executes the 
+model. A good analogy of an MLflow model is that it’s a bit like a Dockerfile for a model, 
+where you describe metadata of the model, and deployment tools upstream are able to",0,-10.042582,MLflow models are typically stored in a central repository or model registry. They can be deployed to various environments such as cloud platforms or on-premises servers. The location of the model depends on the deployment strategy and infrastructure in use.
+where are you,in the current status.,0,-10.159994,I don't know.
+where are you,"deploy. In a case where your deployment is not for an environment supported by 
+MLflow, you can use this feature to specialize the way you deploy.
+• Request header provider: Enables you to control and add extra values to outgoing",0,-10.247551,I don't know.
+where are you,"Machine Learning 
+Engineering  
+with MLflow
+Manage the end-to-end machine learning life cycle 
+with MLflow
+Natu Lauchande
+BIRMINGHAM—MUMBAI",0,-10.516294,I am in Birmingham or Mumbai assisting with machine learning engineering tasks using MLflow to manage the end-to-end machine learning life cycle.
+where are you,problem.,0,-10.6055565,I don't know.
+where are you,features .,0,-10.660493,I don't have a physical location as I am a virtual assistant.

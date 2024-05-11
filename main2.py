@@ -54,15 +54,6 @@ def process_pdf_batch(pdf_files):
     return batch_docs
 
 
-if "searched" not in st.session_state:
-    st.session_state["searched"] = False
-
-if "uploaded_files" not in st.session_state:
-    st.session_state["uploaded_files"] = False
-
-st.session_state
-
-
 def get_retrieved_documents(loader, query):
     with st.spinner("Multiple pdf are being processed. Please wait....."):
         loader = process_pdf_batch(uploaded_files)
@@ -99,32 +90,11 @@ if st.button("Search"):
         st.session_state["uploaded_files"] = True
 
         data = get_retrieved_documents(uploaded_files, query)
-
-        idx = 0
-        while idx < len(data):
-            with st.form(f"my_form_{idx}"):
-                ans = llm_chain.invoke(
+        data["answer"] = ""
+        for idx in range(len(data)):
+            data.iloc[idx, 4] = llm_chain.invoke(
                     {"context": data.iloc[idx, 1], "question": query}
                 )
-                st.write(f"Document :{idx+1}\t{data.iloc[idx, 1]}")
-                genre = st.radio(
-                    f"Answer : \n {ans}",
-                    [":thumbsup:", ":thumbsdown:"],
-                    horizontal=True,
-                    key=f"genre_{idx}",
-                )
-                click = st.form_submit_button("Feedback")
-
-                if click:
-                    if genre := ":thumbsup:":
-                        data.iloc[idx, 2] = 1
-                    idx += 1  # Move to the next document
-                    break  # Exit the form context
-
-            if (
-                not click
-            ):  # If the form hasn't been submitted yet, stay on the same document
-                continue
 
         directory = "training"
         if not os.path.exists(directory):
