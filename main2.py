@@ -19,7 +19,7 @@ load_dotenv()
 
 llm = ChatOpenAI(temperature=0, model_name="gpt-3.5-turbo")
 
-model = CrossEncoder("cross-encoder/ms-marco-MiniLM-L-6-v2")
+model = CrossEncoder("models/cross-encoder-original")
 prompt = hub.pull("rlm/rag-prompt")
 llm_chain = prompt | llm | StrOutputParser()
 
