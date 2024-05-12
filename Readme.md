@@ -8,45 +8,45 @@ Follow these steps to get started with the project:
 
 1. Clone the Repository
 
-```bash
-git clone https://github.com/your-username/rag-with-human-feedback.git
-cd rag-with-human-feedback
-```
+    ```bash
+    git clone https://github.com/shyamsundar009/Rag-with-Human-feedback
+    cd rag-with-human-feedback
+    ```
 
 2. Install the Requirements
 
-```bash
-pip install -r requirements.txt
-```
+    ```bash 
+    pip install -r requirements.txt
+    ```
 
 3. Insert OpenAI Key
 
-Insert your OpenAI API key in the appropriate configuration file or environment variable. Use the .env_template file and paste the key
-```bash
-OPENAI_API_KEY="sk-#####################"
-```
+    Insert your OpenAI API key in the appropriate configuration file or environment variable. Use the .env_template file and paste the key and rename it as .env
+    ```bash
+    OPENAI_API_KEY="sk-#####################"
+    ```
 
 4. Run the Streamlit Application
 
-```bash
-streamlit run main2.py
-```
+    ```bash
+    streamlit run main2.py
+    ```
 
-This will start the Streamlit application where you can interact with the RAG model and get the outputs in the testing folder and training folder
+    This will start the Streamlit application where you can interact with the RAG model and get the outputs in the testing folder and training folder
 
 5. Label the Data
 
-Ensure your data is appropriately labeled for training.[using training folder] 
+    Ensure your data is appropriately labeled for training.[using training folder] 
 
-### Run the CrossEncoder Notebook for Training
+6. Run the CrossEncoder Notebook for Training
 
-Execute the `crosencoder_training.ipynb` file to train the model.
+    Execute the `cross_encoder_training.ipynb` file to train the model.
 
-6. Run the Streamlit Application for Fine-tuning
+7. Run the Streamlit Application for Fine-tuning
 
-```bash
-streamlit run main3.py
-```
+    ```bash
+    streamlit run main3.py
+    ```
 
 ## Contributing
 
